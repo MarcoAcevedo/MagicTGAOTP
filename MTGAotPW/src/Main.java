@@ -5,16 +5,25 @@ import java.util.*;
 import java.io.*; 
 
 
-public class Main {
-	public static void main(String[] args) throws InterruptedException {
+public class Main extends Parser{
+	public static void main(String[] args) throws InterruptedException{
 		
-		Army Kiora = new Army("gold", "kiora", "Planeswalker", 1, 6, 4, 5, 6, 4, "SeaBorn", 2, 5, 345, 345);
+		HashMap<String, Army> allArmyCards = armyParser("cards/army/kiora");
 		
-		LinkedList<Army> planeswalkers = new LinkedList<Army>();
+		System.out.println(allArmyCards.get("kiora").getName());
 		
-		//ArrayList<Army> Kiora = armyParser("data/students.csv");
+		//Army kiora = new Army("gold", "kiora", "Planeswalker", 1, 6, 4, 5, 6, 4, "SeaBorn", 2, 5, 345, 345);
+		
+		//HashMap<String, Army> planeswalkers = new HashMap<String, Army>();
+		
+		//planeswalkers.put("kiora", kiora);
+		
+		//System.out.println(planeswalkers.get("kiora").getName());
+		
+		//Army kiora = new Army("gold", "kiora", "Planeswalker", 1, 6, 4, 5, 6, 4, "SeaBorn", 2, 5, 345, 345);
+		//HashMap<String, Army> kiora = armyParser("cards/army/kiora");
 	
-		PanelUI GUI = new PanelUI();
+		//PanelUI GUI = new PanelUI();
 		//Thread.sleep(100);
 		//System.exit(0);
 	}
